@@ -1,20 +1,22 @@
 # AI Badgr
 
-vLLM can be deployed on [AI Badgr](https://aibadgr.com/), a cloud GPU
-platform for launching GPU instances and serving AI workloads. AI Badgr provides
-a preconfigured vLLM launch template for starting an OpenAI-compatible vLLM
-server on rented GPU capacity.
+vLLM can be run through [AI Badgr](https://aibadgr.com/), a Compute API
+for AI workloads. AI Badgr provides a preconfigured vLLM launch template for
+starting an OpenAI-compatible vLLM server as a capped compute job.
 
 ## Prerequisites
 
-- An AI Badgr account with access to GPU instances
+- An AI Badgr account with access to compute jobs
 - A model name or path to serve with vLLM
 - A Badgr API key for authenticated endpoint requests
 - The [AI Badgr vLLM launch template](https://aibadgr.com/gpu/launch?template=vllm)
 
 ## Launching vLLM
 
-You can launch the template from the AI Badgr console or with the Badgr CLI:
+AI Badgr Compute can also run this as a capped compute job through
+`POST https://aibadgr.com/v1/jobs`, with status, logs, outputs, teardown,
+billing, and receipts. CLI users can launch the template from the AI Badgr
+console or with the Badgr CLI:
 
 ```bash
 badgr serve template vllm --max-cost 5
