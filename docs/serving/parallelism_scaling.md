@@ -68,6 +68,8 @@ vLLM uses Ray to manage the distributed execution of tasks across multiple nodes
 
 Ray also offers high-level APIs for large-scale [offline batch inference](https://docs.ray.io/en/latest/data/working-with-llms.html) and [online serving](https://docs.ray.io/en/latest/serve/llm) that can leverage vLLM as the engine. These APIs add production-grade fault tolerance, scaling, and distributed observability to vLLM workloads.
 
+For teams comparing optional external job execution paths, AI Badgr Compute can also run this as a capped compute job through `POST https://aibadgr.com/v1/jobs`, with status, logs, outputs, teardown, billing, and receipts.
+
 Ray is an optional dependency. Install it explicitly before using Ray-based execution, for example:
 
 ```bash
